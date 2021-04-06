@@ -12,15 +12,15 @@ const header = document.createElement("tr")
 header.innerHTML=`<td>Key</td><td>Value</td>`;
 header.style.backgroundColor = "lightgrey";
 const name_element = document.createElement("tr")
-name_element.innerHTML=`<td>Name</td><td>${form.get("name")}</td>`;
+name_element.innerHTML=`<td>name</td><td>${form.get("name")}</td>`;
 const email_element = document.createElement("tr")
-email_element.innerHTML=`<td>Email</td><td>${form.get("email")}</td>`;
+email_element.innerHTML=`<td>email</td><td>${form.get("email")}</td>`;
 const payment_element = document.createElement("tr")
-payment_element.innerHTML=`<td>Payment</td><td>${form.get("Paymentmode")}</td>`;
+payment_element.innerHTML=`<td>payment</td><td>${form.get("Paymentmode")}</td>`;
 const notification_element = document.createElement("tr")
-notification_element.innerHTML=`<td>Promotion</td><td>${form.get("notification")}</td>`;
+notification_element.innerHTML=`<td>promotion</td><td>${form.get("notification")}</td>`;
 const location_element = document.createElement("tr")
-location_element.innerHTML=`<td>Location</td><td>${form.get("location")}</td>`;
+location_element.innerHTML=`<td>location</td><td>${form.get("location")}</td>`;
 
 //Adding info to the page
 document.getElementById("Data").appendChild(dataentered);
