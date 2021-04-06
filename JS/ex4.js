@@ -31,7 +31,7 @@ function Submit() {
 			var column1 = row.insertCell(0);
 			var column2 = row.insertCell(1);
 		
-			column1.innerHTML= "Name:";
+			column1.innerHTML= "name:";
 		
 			column2.innerHTML= name;
 			
@@ -39,7 +39,7 @@ function Submit() {
 			var column1 = row.insertCell(0);
 			var column2 = row.insertCell(1);
 		
-			column1.innerHTML= "Email:";
+			column1.innerHTML= "email:";
 	
 			column2.innerHTML= email;
 		
@@ -47,7 +47,7 @@ function Submit() {
 			var column1 = row.insertCell(0);
 			var column2 = row.insertCell(1);
 		
-			column1.innerHTML= "Payment Type:";
+			column1.innerHTML= "payment:";
 		
 			column2.innerHTML= paymentType;
 
@@ -55,7 +55,7 @@ function Submit() {
 			var column1 = row.insertCell(0);
 			var column2 = row.insertCell(1);
 		
-			column1.innerHTML= "Special Promo:";
+			column1.innerHTML= "promotion:";
 		
 			column2.innerHTML= specialPromo;
 		
@@ -63,7 +63,7 @@ function Submit() {
 			var column1 = row.insertCell(0);
 			var column2 = row.insertCell(1);
 		
-			column1.innerHTML= "Preferred Location:";
+			column1.innerHTML= "location:";
 		
 			column2.innerHTML= preferredLocation;
 }
