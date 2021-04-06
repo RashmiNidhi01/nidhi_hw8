@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-4</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+<h1>Sample Form</h1>
+</head>
+<body>
+<form action="/action_page.php">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value="xyz" required><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" value="xyz@domain.com" required placeholder="xyz@domain.com">
+  <span id="email"></span><br><br>
+  
+  <label for="Payment">Payment Type:</label><br>
+  <input type="radio" id="Paymentmode" value="Cash" name="mode"><label for="Cash">Cash</label><br>
+  <input type="radio" id="Paymentmode" value="Credit Card" name="mode"><label for="Credit Card">Credit Card</label><br>
+  <input type="radio" id="Paymentmode" value="Google Pay" name="mode"><label for="Google Pay">Google Pay</label><br>
+  <input type="radio" id="Paymentmode" Value="Apple Pay" name="mode"><label for="Apple Pay">Apple Pay</label><br> 
+  <br>
+  <input type="checkbox" id="notification" name="notificaton" value="signup">
+  <label for="notification"> Sign me up for special promotions</label><br>
+  <br>
+  <label for="locations">Preferred Locations:</label>
+  <select name="locations" id="locations">
+    <option value="Los Angeles">Los Angeles</option>
+    <option value="Orange County">Orange County</option>
+    <option value="Riverside">Riverside</option>
+    <option value="San Diego">San Diego</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+  <button type="cancel" onclick="">Cancel</button>
+</form> 
+<h3>Form Data Entered</h3>
+<table id="Data">
+    <script src="/JS/ex4.js"></script>
+</body>
+</html>
