@@ -1,35 +1,77 @@
-//Get the first element in the document with class="form":
-const lookupElement = document.querySelector("form");
-//attaching event handler
-lookupElement.addEventListener("submit", e => {
-  e.preventDefault();
-var form = new FormData(document.querySelector("form"));
+function Submit() {
+  
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  
+  var paymentType = document.querySelector('input[name="paymentType"]:checked').value; 
+  var specialPromo = document.getElementById("specialPromo");
+	  if (specialPromo.checked == true)
+		  {
+			specialPromo = "On";
+		  } 
+	  else 
+		  {
+			 specialPromo = "Off";
+		  }
+	var preferredLocation = document.getElementById("preferredLocation").value;
+	
+	document.getElementById("resultTable").innerHTML="";
+	
+	var row =document.getElementById("resultTable").insertRow(0);
+			var column1 = row.insertCell(0);
+			var column2 = row.insertCell(1);
+			
+			column1.innerHTML= "Data";
+			column2.innerHTML= "Value";
+      column1.style.backgroundColor = "lightgrey";
+      column2.style.backgroundColor = "lightgrey";
 
-//Creating DOM element for user properties
-const dataentered = document.createElement("tr")
-dataentered.innerHTML="Form Data Entered";
-const header = document.createElement("tr")
-header.innerHTML=`<td>Key</td><td>Value</td>`;
-header.style.backgroundColor = "lightgrey";
-const name_element = document.createElement("tr")
-name_element.innerHTML=`<td>name</td><td>${form.get("name")}</td>`;
-const email_element = document.createElement("tr")
-email_element.innerHTML=`<td>email</td><td>${form.get("email")}</td>`;
-const payment_element = document.createElement("tr")
-payment_element.innerHTML=`<td>payment</td><td>${form.get("Paymentmode")}</td>`;
-const notification_element = document.createElement("tr")
-notification_element.innerHTML=`<td>promotion</td><td>${form.get("notification")}</td>`;
-const location_element = document.createElement("tr")
-location_element.innerHTML=`<td>location</td><td>${form.get("location")}</td>`;
+	
+	var row =document.getElementById("resultTable").insertRow(1);
+			var column1 = row.insertCell(0);
+			var column2 = row.insertCell(1);
+		
+			column1.innerHTML= "Name:";
+		
+			column2.innerHTML= name;
+			
+	var row =document.getElementById("resultTable").insertRow(2);	
+			var column1 = row.insertCell(0);
+			var column2 = row.insertCell(1);
+		
+			column1.innerHTML= "Email:";
+	
+			column2.innerHTML= email;
+		
+	var row =document.getElementById("resultTable").insertRow(3);	
+			var column1 = row.insertCell(0);
+			var column2 = row.insertCell(1);
+		
+			column1.innerHTML= "Payment Type:";
+		
+			column2.innerHTML= paymentType;
 
-//Adding info to the page
-document.getElementById("Data").appendChild(dataentered);
-const info_element = document.getElementById("Data");//Get the element with id="Data"
-info_element.innerHTML = " "; // clearing previous user info data
-info_element.appendChild(header);
-info_element.appendChild(name_element);
-info_element.appendChild(email_element);
-info_element.appendChild(payment_element);
-info_element.appendChild(notification_element);
-info_element.appendChild(location_element);
-});
+	var row =document.getElementById("resultTable").insertRow(4);	
+			var column1 = row.insertCell(0);
+			var column2 = row.insertCell(1);
+		
+			column1.innerHTML= "Special Promo:";
+		
+			column2.innerHTML= specialPromo;
+		
+	var row =document.getElementById("resultTable").insertRow(5);	
+			var column1 = row.insertCell(0);
+			var column2 = row.insertCell(1);
+		
+			column1.innerHTML= "Preferred Location:";
+		
+			column2.innerHTML= preferredLocation;
+}
+function Clear() {
+  
+  document.getElementById("name").value="";
+  document.getElementById("email").value="";
+  document.getElementById("specialPromo").checked=false;
+  document.getElementById("preferredLocation").value="";
+  document.querySelector('input[name="paymentType"]:checked').checked=false;	
+}
